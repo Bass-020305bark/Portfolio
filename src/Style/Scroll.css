@@ -1,0 +1,60 @@
+.scroll-parent {
+  width: 100%;
+  min-height: 90px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-bottom: 10px;
+  margin-top: -68px;
+  position: relative;
+  z-index: 2;
+}
+
+.scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scroll-des {
+  font-size: 0.72rem;
+  color: var(--fontSecondaryColor);
+  letter-spacing: 2px;
+}
+
+.scroll-icon {
+  animation: jump infinite 1.6s ease;
+  color: var(--fontSecondaryColor);
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(-4px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 700px) {
+  .scroll-parent {
+    min-height: 70px;
+    padding-bottom: 4px;
+    margin-top: -48px;
+  }
+
+  .scroll-des {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-parent {
+    display: none;
+  }
+}

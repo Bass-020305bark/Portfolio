@@ -1,0 +1,48 @@
+.skills-parent {
+  width: 100%;
+  min-height: 46vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 24px 18px;
+}
+
+.skills-list {
+  width: min(1120px, 100%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 8px;
+  padding-bottom: 8px;
+}
+
+.skills-des {
+  color: var(--fontSecondaryColor);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  text-align: center;
+}
+
+.skill-heading {
+  background: linear-gradient(to right, var(--primaryColor), var(--secondaryColor));
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: clamp(1.9rem, 4vw, 2.4rem);
+}
+
+@media (max-width: 760px) {
+  .skills-parent {
+    padding: 20px 14px;
+    min-height: auto;
+  }
+
+  .skills-list {
+    gap: 12px;
+  }
+
+  .skills-des {
+    font-size: 0.96rem;
+  }
+}
